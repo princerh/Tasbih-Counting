@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dom Project</title>
+    <title>Digital Tasbih</title>
+    <link rel="shortcut icon" href="./images/3771568-200.png" type="image/x-icon">
     
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <h1 class="text-4xl mt-10 text-center font-bold text-sky-700 ">Digital Tasbih</h1>
-
+    <h1 class="text-4xl pt-10 text-center font-bold text-sky-700 mb-10 ">Digital Tasbih</h1>
+    <section class="relative flex justify-center ">
+      <p class="absolute text-2xl">Round Completed: <span id="round"> 0 </span> </p>
+    </section>
     <section class="my-10">
         <div class="flex justify-center">
-          <div class="flex flex-col lg:flex-row justify-center gap-8 mx-2">
+          <div id="dada" class="flex flex-col lg:flex-row justify-center gap-8 mx-2">
             <!-- subhan Allah -->
-            <div class="card w-fit bg-base-100 p-10 shadow-xl space-y-5">
+            <div id="subhani" class="card w-fit bg-base-100 p-10 shadow-xl space-y-5">
                 <h2 class="text-2xl text-center font-semibold">Subhan Allah</h2>
                 
                   <p id="displaySubhan" class="text-center text-3xl font-semibold">0</p>
                   <div class="space-x-4 flex flex-row ">
                     <button id="incrementSubhan" class="btn btn-outline btn-success">Increment</button>
                     <button id="decrementSubhan" class="btn btn-outline btn-error">Decrement</button>
+                  </div>
+                  <div class="flex justify-center">
+                    <button id="resetSubhan" class="btn btn-outline px-10 text-black">RESET</button>
+                  </div>
+                  <div>
+                    <p id="countSubhan" class="text-2xl text-black">0</p>
                   </div>
                 </div>
             
@@ -34,6 +43,12 @@
                         <button id="incrementAlham" class="btn btn-outline btn-success">Increment</button>
                         <button id="decrementAlham" class="btn btn-outline btn-error">Decrement</button>
                       </div>
+                      <div class="flex justify-center">
+                        <button id="resetAlham" class="btn btn-outline px-10 text-black">RESET</button>
+                      </div>
+                      <div>
+                        <p id="countAlham" class="text-2xl text-black">0</p>
+                      </div>
                     </div>  
             
                     <!-- Allahuakber -->
@@ -45,6 +60,12 @@
                             <button id="incrementAllahu" class="btn btn-outline btn-success">Increment</button>
                             <button id="decrementAllahu" class="btn btn-outline btn-error">Decrement</button>
                           </div>
+                          <div class="flex justify-center">
+                            <button id="resetAllahu" class="btn btn-outline px-10 text-black">RESET</button>
+                          </div>
+                          <div>
+                            <p id="Allaaah" class="text-2xl text-black">0</p>
+                          </div>
                         </div>
                     </div>
         </div>
@@ -53,7 +74,21 @@
             <button id="resetButton" class="btn btn-warning">RESET ALL TASBIH</button>
         </div>
     </section>
+
+    <section class="py-16" >
+      <div class="flex justify-center items-center mb-8"><h1 class="text-4xl text-black font-bold">Change the Theme!</h1></div>
+      <div class="flex flex-col lg:flex-row justify-center items-center gap-3">
+        <button onclick="document.body.style.backgroundColor = 'yellow'" class="btn">Make Yellow</button> <!-- aita option 1: pura body k yellow kore dibe -->
+    <button onclick="makeRed()" class="btn">Make Red </button> <!-- option 2: by javascript function calling -->
+    <button onclick="" id="make-blue" class="btn">Make Blue </button> <!-- option 3: by id -->
+    <button id="make-purple" class="btn">Make Purple</button>
+    <button id="make-pink" class="btn">Make Pink</button>
+    <button id="make-green" class="btn">Make Green</button>
+    <button id="make-goldenRod" class="btn">Make GoldenRod</button>
+      </div>
+    </section>
     
     <script src="dom.js"></script>
+    <script src="event.js"></script>
 </body>
 </html>

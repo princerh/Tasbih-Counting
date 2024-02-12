@@ -213,6 +213,10 @@ resetButton.addEventListener('click', function () {
     countSubhan = 0;
     countMy = 0;
     count = 0;
+    countSub.innerText = 0;
+    countAl.innerText = 0;
+    orginal.innerText = 0;
+    round.innerText = 0;
 })
 
 

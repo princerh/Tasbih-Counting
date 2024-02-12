@@ -41,14 +41,13 @@ incrementSubhan.addEventListener('click', function () {
         checkUpSubhan += 1;
         incrementSubhan.setAttribute('disabled', true)
         decrementSubhan.setAttribute('disabled', true)
-        if (checkUpSubhan < 2) {
-            countSub.innerText = countSubhan;
-            total = countAlham + countSubhan + countMy;
-            if (total !== 0 && total % 3 === 0) {
-                count += 1;
-                round.innerText = count;
-            }
+        countSub.innerText = countSubhan;
+        total = countAlham + countSubhan + countMy;
+        if (total !== 0 && total % 3 === 0) {
+            count += 1;
+            round.innerText = count;
         }
+
     }
     subhanAllahInitialValue += 1;
     if (subhanAllahInitialValue > 33) {
@@ -85,13 +84,11 @@ incrementAlham.addEventListener('click', function () {
         checkUpAlham += 1;
         incrementAlham.setAttribute('disabled', true)
         decrementAlham.setAttribute('disabled', true)
-        if (checkUpAlham < 2) {
-            countAl.innerText = countAlham;
-            total = countAlham + countAlham + countMy;
-            if (total !== 0 && total % 3 === 0) {
-                count += 1;
-                round.innerText = count;
-            }
+        countAl.innerText = countAlham;
+        total = countAlham + countAlham + countMy;
+        if (total !== 0 && total % 3 === 0) {
+            count += 1;
+            round.innerText = count;
         }
     }
     alhamdulillahInitialValue += 1;
@@ -127,14 +124,14 @@ incrementAllahu.addEventListener('click', function () {
         checkUpAllahu += 1;
         incrementAllahu.setAttribute('disabled', true)
         decrementAllahu.setAttribute('disabled', true)
-        if (checkUpAllahu < 2) {
-            orginal.innerText = countMy;
-            total = countAlham + countSubhan + countMy;
-            if (total !== 0 && total % 3 === 0) {
-                count += 1;
-                round.innerText = count;
-            }
+
+        orginal.innerText = countMy;
+        total = countAlham + countSubhan + countMy;
+        if (total !== 0 && total % 3 === 0) {
+            count += 1;
+            round.innerText = count;
         }
+
     }
     allahuAkberInitialValue += 1;
     if (allahuAkberInitialValue > 33) {
@@ -194,7 +191,7 @@ resetButton.addEventListener('click', function () {
     alhamdulillahInitialValue = 0;
     allahuAkberInitialValue = 0;
 
-    
+
     checkUpAlham = 0;
     checkUpSubhan = 0;
     checkUpAllahu = 0;
